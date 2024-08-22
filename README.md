@@ -5,20 +5,20 @@ A simple code for prediction of the values for 1D array. We can provide data in 
 It uses simple mathematics functions to calculate or predict the values for X.
 
 # Prerequisites
-### Creating Virtual Enviroment:
-```shell
+### Creating Virtual Enviroment
+```
 conda create --name linear-regression-1d python=3.10
 ```
 ### Activating
-```shell
+```
 conda activate linear-regression-1d
 ```
 ### Installing Packages
-```shell
+```
 pip install -r requirements.txt
 ```
 ### Registrating the environment in a notebook
-```shell
+```
 ipython kernel install --name "linear-regression-1d" --user
 ```
 
@@ -36,8 +36,8 @@ Feel free to create a pull request with the additional implementation.
 ### Sample Code
 ```
 from Linear_Regression_1D import Linear_Regression
-training_data = np.text('training_data.csv', delimiter = ',')
-test_data = np.text('test_data.csv', delimiter = ',')
+training_data = np.loadtxt('training_data.csv', delimiter = ',')
+test_data = np.loadtxt('test_data.csv', delimiter = ',')
 
 X_Train = training_data[:, 0]
 Y_Train = training_data[:, 1]
