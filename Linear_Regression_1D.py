@@ -32,5 +32,11 @@ class Linear_Regression:
         # Finding the coefficient of determination
         # Coefficient of determination = 1 - (sum((y_actual - y_pred) ^ 2) / sum((y_actual - y_mean) ^ 2)))
         y_pred = self.predict(x)
-        score = 1 - np.sum(((y_pred - y)**2))  / np.sum((y_pred - y.mean()) ** 2)
+        score = 1 - np.sum(((y_pred - y)**2))  / np.sum((y_pred - y.mean())**2)
         return score
+    
+    def cost(self, x: np.ndarray, y: np.ndarray) -> float:
+        # Finding the total cost or error
+        # Total Cost = sum((y_Actual - y_Pred) ^ 2)
+        y_pred = predict(x)
+        return np.sum((y - y_pred) ** 2)
