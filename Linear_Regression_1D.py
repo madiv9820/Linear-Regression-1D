@@ -38,5 +38,5 @@ class Linear_Regression:
     def cost(self, x: np.ndarray, y: np.ndarray) -> float:
         # Finding the total cost or error
         # Total Cost = sum((y_Actual - y_Pred) ^ 2)
-        y_pred = predict(x)
+        y_pred = self.predict(x)
         return np.sum((y - y_pred) ** 2)
